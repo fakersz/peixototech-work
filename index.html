@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#dce2e9" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23c3d4a5' d='M16 2 30 10v13l-14 8L2 23V10zm0 3L5 11l11 6 11-6zm-11 9v7l10 6v-8zm13 5v8l9-6v-7z'/%3E%3C/svg%3E" />
+    <title>Escritório Virtual — Sala do CEO</title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="viewport" aria-label="Sala tridimensional interativa"></div>
+      <header class="project-panel">
+        <div class="brand"><span class="brand-mark" aria-hidden="true">◇</span> PEIXOTO TECH</div>
+        <h1>Nosso escritório</h1>
+        <p class="status"><span></span> Jean está aqui</p>
+      </header>
+      <nav class="camera-panel" aria-label="Controles da câmera">
+        <span class="eyebrow">VISUALIZAÇÃO</span>
+        <div class="toolbar">
+          <button data-view="isometric" title="Visão isométrica" aria-label="Visão isométrica" aria-pressed="true"><span aria-hidden="true">◇</span> Escritório</button>
+          <button data-view="top" title="Visão superior" aria-label="Visão superior" aria-pressed="false"><span aria-hidden="true">⊞</span> Superior</button>
+          <button data-view="front" title="Visão frontal" aria-label="Visão frontal" aria-pressed="false"><span aria-hidden="true">▱</span> Frontal</button>
+          <span class="divider"></span>
+          <button id="center-camera" title="Centralizar câmera" aria-label="Centralizar câmera"><span aria-hidden="true">⌖</span></button>
+          <button id="toggle-grid" title="Mostrar ou ocultar medidas do piso" aria-label="Mostrar ou ocultar medidas do piso" aria-pressed="true"><span aria-hidden="true">▦</span></button>
+        </div>
+      </nav>
+      <div class="scene-caption"><span class="live-dot"></span> NOSSA PRIMEIRA SEDE <span class="caption-divider">/</span> <span>SALA DO CEO</span></div>
+      <div id="jean-label" class="character-label" hidden><span class="label-dot"></span><strong>Jean</strong><span>CEO</span></div>
+      <aside class="person-panel" aria-label="Jean, CEO">
+        <div class="person-header"><div class="person-avatar" aria-hidden="true">J</div><div><h2>Jean <span>Você</span></h2><p>CEO · Peixoto Tech</p></div><span class="presence" title="Presente no escritório"></span></div>
+        <div class="person-activity"><span class="live-dot"></span><span id="jean-activity" role="status">No escritório</span></div>
+        <div class="person-actions"><button id="wave-jean">Acenar <span aria-hidden="true">↗</span></button><button id="return-jean">Voltar à mesa <span aria-hidden="true">⌖</span></button></div>
+      </aside>
+      <div class="office-hint"><span class="hint-icon" aria-hidden="true">↗</span><span>Clique no chão para caminhar<small>Arraste para olhar ao redor · Scroll para aproximar</small></span><details><summary aria-label="Ver todos os controles">?</summary><div><strong>À vontade no escritório</strong><p>Clique no piso para mover Jean. Clique no Jean ou em Acenar para cumprimentar.</p><p><kbd>W A S D</kbd> ou setas: caminhar após clicar na sala.</p><p>Esquerdo + arrastar: girar a câmera.<br>Direito + arrastar: deslocar.<br>Scroll: aproximar ou afastar.</p><p>No celular: toque para caminhar, arraste com um dedo para girar e use dois dedos para deslocar ou aproximar.</p></div></details></div>
+      <footer><span><span class="footer-dot"></span> PEIXOTO TECH · SALA DO CEO</span><span>9 m² · CADA QUADRADO = 1 m²</span></footer>
+      <div id="error-message" role="alert" hidden></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

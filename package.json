@@ -1,0 +1,21 @@
+{
+  "name": "escritorio-virtual-3d",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "dev": "vite --configLoader runner --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build --configLoader runner",
+    "preview": "vite preview --configLoader runner --host 127.0.0.1 --port 4173 --strictPort"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "vite": "^7.3.7"
+  }
+}
